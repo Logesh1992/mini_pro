@@ -19,6 +19,21 @@ app.use(cors({
     exposedHeaders: "*"
 }));
 
+app.use((req, res, next) => {
+    res.header("Access-Control-Allow-Origin", "https://playful-faloodeh-7f98ef.netlify.app");
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
+    next();
+});
+
+app.options('*', (req, res) => {
+    res.header("Access-Control-Allow-Origin", "https://playful-faloodeh-7f98ef.netlify.app");
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
+    res.send();
+});
+
+
 
 mongoose
     .connect(process.env.MONGO_URL, {
