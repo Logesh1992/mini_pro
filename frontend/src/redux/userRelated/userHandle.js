@@ -12,7 +12,7 @@ import {
     getFailed,
     getError,
 } from './userSlice';
-const REACT_APP_BASE_URL = "https://jocular-sawine-706d28.netlify.app/";
+const REACT_APP_BASE_URL = https://glittery-meerkat-f20848.netlify.app/";
 export const loginUser = (fields, role) => async (dispatch) => {
     dispatch(authRequest());
 

@@ -5,7 +5,7 @@ import {
     getFailed,
     getError
 } from './complainSlice';
-const REACT_APP_BASE_URL = "https://jocular-sawine-706d28.netlify.app/";
+const REACT_APP_BASE_URL = https://glittery-meerkat-f20848.netlify.app/";
 export const getAllComplains = (id, address) => async (dispatch) => {
     dispatch(getRequest());
 
