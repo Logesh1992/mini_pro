@@ -5,7 +5,7 @@ import {
     getFailed,
     getError
 } from './noticeSlice';
-const REACT_APP_BASE_URL = https://glittery-meerkat-f20848.netlify.app/";
+const REACT_APP_BASE_URL = "https://glittery-meerkat-f20848.netlify.app";
 export const getAllNotices = (id, address) => async (dispatch) => {
     dispatch(getRequest());
 
