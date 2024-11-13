@@ -15,8 +15,10 @@ dotenv.config();
 
 app.use(express.json({ limit: '10mb' }))
 app.use(cors({
+    origin: '*',
     exposedHeaders: "*"
-}))
+}));
+
 
 mongoose
     .connect(process.env.MONGO_URL, {
